@@ -1,0 +1,39 @@
+.userlog {
+    margin : 45px auto;
+    padding: 45px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 25px;
+    width : 400px;
+}
+
+.userdash {
+    margin: 25px auto 0 auto;
+    padding: 30px;
+    border-radius: 17px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 20px;
+    width: 80vw;
+    min-width: 200px;
+    min-height: 420px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 5px;
+    width: 115px;
+    margin: 15px;
+    border: 2px solid white;
+    background: none;
+}
+
+@media only screen and (max-width: 565px){
+
+.userlog {
+    margin: 25px auto auto auto;
+    padding: 0 25px 0 25px;
+    width: 80vw;
+    height: auto;
+}
+
+}

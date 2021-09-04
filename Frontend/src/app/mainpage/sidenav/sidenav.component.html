@@ -1,0 +1,58 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav Toolbar" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar color="primary" class="Toolbar">
+      <span style="text-align: center;">Algorithm</span> 
+    </mat-toolbar>
+    <mat-nav-list class="list-items">
+      <div class="list-items">
+        <a routerLink="/AES" routerLinkActive="selected" class="list-item" mat-list-item><span class="material-icons">forward</span>AES</a>
+        <a routerLink="/BFA" routerLinkActive="selected" class="list-item" mat-list-item><span class="material-icons">forward</span>BlowFish</a>
+        <a routerLink="/DES" routerLinkActive="selected" class="list-item" mat-list-item><span class="material-icons">forward</span>DES</a>
+        <a routerLink="/DES3" routerLinkActive="selected" class="list-item" mat-list-item><span class="material-icons">forward</span>Triple DES</a>
+        <a routerLink="/RSA" routerLinkActive="selected" class="list-item" mat-list-item><span class="material-icons">forward</span>RSA</a>
+      </div>
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="Toolbar">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="maintxt">Text Encryption & Decryption</span>
+      <div>
+        <div id="menu" class="Buttoncontainer" *ngIf="(screenWidth < 546 && !Auth) || Auth">
+          <div class="Button" (click)="buttontrig()">
+            <div class="bt1"></div>
+            <div class="bt2"></div>
+            <div class="bt3"></div>
+          </div>
+          <div id="mi" class="mi">
+            <div class="menuitem" *ngIf="Auth">
+              <span>Welcome : {{UserName}}</span>
+              <div routerLink="/" routerLinkActive="selected">User Dashboard</div>
+              <div (click)="Logout()">Log out</div>
+            </div>
+            <div *ngIf="!Auth" class="menuitem">
+              <div routerLink="/" routerLinkActive="selected">Log in</div>
+            </div>
+          </div>
+        </div>
+        <div class="loginbut" *ngIf="screenWidth > 545 && !Auth">
+          <button routerLink="/" routerLinkActive="selected">Log in</button>
+        </div>
+      </div>
+    </mat-toolbar>
+    <div class="page-content-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

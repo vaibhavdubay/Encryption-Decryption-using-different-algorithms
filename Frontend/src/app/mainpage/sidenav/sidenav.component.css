@@ -1,0 +1,213 @@
+.sidenav-container {
+  height: 100%;
+  background: transparent;
+}
+
+.sidenav {
+  width: 150px;
+  height: 100%;
+}
+
+.Toolbar {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.menubar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.Toolbar>span {
+  font-size: 0.9em;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.list-items {
+  height: 80%;
+}
+
+.list-item {
+  padding: 10px 20px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.85);
+  align-items: center;
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+.material-icons {
+  margin: 0 7px 0 0;
+}
+
+.maintxt {
+  font-size: 18px;
+  padding-top: 1vw;
+}
+
+.list-item:hover {
+  color: white;
+  background: rgb(0, 0, 0, 0.3);
+}
+
+.list-item.selected {
+  background: rgb(0, 0, 0, 0.6);
+}
+
+.list-item:hover::before {
+  opacity: 0.4;
+  width: 2.0px;
+  transform: scaleY(0.5);
+}
+
+.list-item.selected::before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.list-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2.2px;
+  background-color: orange;
+  transform: scaleY(0);
+  transition: 0.7s;
+}
+
+.Buttoncontainer
+{
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  width: 20px;
+}
+
+.menuitem > div {
+  font-size: smaller;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.7s;
+  font-size: 0.6em;
+  padding: 3px;
+}
+
+.menuitem > span {
+  font-size: 0.7em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.menuitem > div:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menuitem > div:active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menuitem {
+  position: absolute;
+  text-align: center;
+  right: 2px;
+  letter-spacing: normal;
+  margin-top: 10px;
+  background-color: rgba(0,0,0,0.45);
+  border-radius: 5px;
+  width: 150px;
+  overflow: hidden;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+/*animation */
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.mi {
+  height: 0%;
+  transition: 0.7s;
+  width: 0%;
+  opacity: 0;
+}
+.show {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.Button {
+  width: 18px;
+}
+
+.Button > div {
+  height: 3px;
+  width: 3px;
+  margin: 4px auto;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.bt1,
+.bt3 {
+  transition: 1s;
+}
+.bt2 {
+  transition: 0.75s;
+  margin-bottom: 0;
+}
+
+.Button:hover .bt1,
+.Button:hover .bt3 {
+  width: 14px;
+}
+
+.Button:hover > .bt2 {
+  width: 7px;
+}
+
+/* .page-content-container {
+  overflow: hidden;
+} */
+.loginbut {
+  position: absolute;
+  right : 2vw;
+  top: 14px;
+}
+.loginbut button {
+  border-radius: 5px;
+  padding: 5px;
+  width: 70px;
+  border: 2px solid white;
+  background: none;
+}
+
+
+@media only screen and (max-width: 565px) {
+
+  .page-content-container {
+    height: 80%;
+  }
+
+}
