@@ -1,0 +1,33 @@
+<div>
+    <div class="TableData">
+        
+        <table >
+            <thead>
+                <tr>
+                    <td>S.N.</td>
+                    <td>User Text</td>
+                    <td>Algorithm Name</td>
+                    <td>Used Key</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Data of Userdata; let i = index;">
+                    <td>{{i + 1}}</td>
+                    <td>{{Data.textin}}</td>
+                    <td>{{Data.algoin}}</td>
+                    <td>{{Data.keyin}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <mat-paginator [length]="100"
+                [pageSize]="10"
+                [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+        <div class="clearbutton">
+            <div class="button">Clear</div>
+            <div class="button" (click)="ClearallData()">Clear all</div>
+            {{ClearLog}}
+        </div>
+    </div>
+    
+</div>
